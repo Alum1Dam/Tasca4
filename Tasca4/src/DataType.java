@@ -4,39 +4,36 @@ public class DataType {
         System.out.println(DataType.gd(702));
         System.out.println(DataType.gd(0));
     }
-    public static String gd(int code){
-        if (
-                code == 702 ||
-                        code == 1082 ||
-                        code == 1083 ||
-                        code == 1114 ||
-                        code == 1184 ||
-                        code == 1266 ||
-                        code == 12403
-        ) {
-            return "DATE";
-        } else if (
-                code == 20 ||
-                        code == 21 ||
-                        code == 23 ||
-                        code == 24 ||
-                        code == 26 ||
-                        code == 700 ||
-                        code == 701 ||
-                        code == 790 ||
-                        code == 1700 ||
-                        code == 2202 ||
-                        code == 2203 ||
-                        code == 2204 ||
-                        code == 2205 ||
-                        code == 2206 ||
-                        code == 3734 ||
-                        code == 3769 ||
-                        code == 12396
-        ) {
-            return "NUMERIC";
-        } else {
-            return "STRING";
+    public static String gd(int code) {
+        switch (code) {
+            case 702:
+            case 1082:
+            case 1083:
+            case 1114:
+            case 1184:
+            case 1266:
+            case 12403:
+                return "DATE";
+            case 20:
+            case 21:
+            case 23:
+            case 24:
+            case 26:
+            case 700:
+            case 701:
+            case 790:
+            case 1700:
+            case 2202:
+            case 2203:
+            case 2204:
+            case 2205:
+            case 2206:
+            case 3734:
+            case 3769:
+            case 12396:
+                return "NUMERIC";
+            default:
+                return "STRING";
         }
     }
 }
